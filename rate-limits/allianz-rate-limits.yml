@@ -1,0 +1,29 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Allianz
+providerId: allianz
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Insurance
+  - Financial Services
+  - Rate Limiting
+description: Allianz does not publish a public developer API and therefore has no public rate-limit documentation. Any throttling on partner integrations is contractually defined between Allianz Partners (or the relevant operating entity) and the partner.
+notes: No public developer API — placeholder only.
+sources:
+  - https://www.allianz.com
+responseCodes:
+  throttled: 429
+limits:
+  - name: No public rate limits
+    scope: account
+    metric: not_applicable
+    limit: not applicable
+policies:
+  - name: Partner-contract throttling
+    description: Throughput and SLAs on partner integrations are governed by bilateral contracts at the operating-entity level.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

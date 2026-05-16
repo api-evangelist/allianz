@@ -1,0 +1,58 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+schema: https://www.finops.org/framework/
+provider: Allianz
+providerId: allianz
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Insurance
+  - Financial Services
+  - FinOps
+  - FOCUS
+description: Allianz has no central public developer API and no metered API billing surface. Partner economics flow through the underlying insurance, assistance, or asset-management contract rather than through a per-call API invoice.
+notes: No public developer API — placeholder only.
+sources:
+  - https://www.allianz.com
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+publisherName: Allianz SE
+serviceCategory: Insurance / Financial Services
+billingModel:
+  pricingCategory: Contract
+  billingFrequency: Per-Invoice
+  billingCurrency: EUR
+  chargeCategories:
+    - Purchase
+focusColumns:
+  ServiceName: Allianz Partner Integration
+  ServiceCategory: Insurance / Financial Services
+  ProviderName: Allianz
+  PublisherName: Allianz SE
+  InvoiceIssuerName: Allianz operating entity (varies)
+  BillingCurrency: EUR
+meters:
+  - name: partner_contract
+    description: Master partner contract — not metered per API call; economics flow through underlying policy / assistance product pricing.
+    unit: contract
+    aggregation: count
+    dimensions:
+      - partner
+      - region
+principles:
+  - name: Visibility
+    description: Track Allianz partner cost through the underlying insurance / assistance invoice rather than through API consumption data.
+  - name: Allocation
+    description: Allocate partner cost to the embedding product line (e.g., travel platform's travel-insurance attach revenue and cost).
+  - name: Optimization
+    description: Optimize by aligning embedded-insurance product mix to attach rate and loss-ratio targets; no API-level metering.
+  - name: Accountability
+    description: Partnership and product owners on each side own the commercial relationship; finance reconciles partner invoices.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

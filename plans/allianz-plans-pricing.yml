@@ -1,0 +1,40 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Allianz
+providerId: allianz
+created: '2026-05-16'
+modified: '2026-05-16'
+reconciled: false
+tags:
+  - Insurance
+  - Financial Services
+description: Allianz does not publish a central public developer portal or public API plan. Embedded-insurance, distribution, and partner integrations run through Allianz Partners and the Group's operating entities under bilateral commercial agreements.
+notes: No public developer API — placeholder only. Pricing for partner integrations is bundled with the underlying insurance / assistance product economics.
+sources:
+  - https://www.allianz.com
+  - https://www.allianz-partners.com/
+plans:
+  - id: allianz-partner-integration
+    name: Allianz Partner / Distribution Integration
+    type: enterprise
+    description: Embedded-insurance, travel-assistance, and bancassurance partner integrations are negotiated under bilateral commercial agreements with Allianz Partners or the relevant operating entity.
+    entries:
+      - label: Partner contract
+        name: partner_contract
+        type: subscription
+        metric: contract
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: contact Allianz Partners / local operating entity
+        userMultiplied: false
+    elements:
+      - name: Embedded insurance partnerships
+      - name: Travel-assistance partnerships
+      - name: Bancassurance / broker partnerships
+      - name: No self-service developer plan
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
